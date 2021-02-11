@@ -1,4 +1,4 @@
 # AI-TicTacToe
 
-Welcome to my TICTACTOE AI, using reinforcement learning.
+Welcome to my TicTacToe AI, using reinforcement learning.
 
