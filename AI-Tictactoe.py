@@ -179,37 +179,37 @@ def WinningRate(myExperience):
     print('The winning rate is : ', nbWins/10, '%')
     return nbWins
 
+if __name__ == "__main__":
+   print('----- WELCOME TO MY AI-TICTACTOE-PROGRAM -----', end='\n\n')
 
-print('----- WELCOME TO MY AI-TICTACTOE-PROGRAM -----', end='\n\n')
+   mode = int(input("Entrez 0 pour jouer contre un humain, 1 contre une IA : "))%2
 
-mode = int(input("Entrez 0 pour jouer contre un humain, 1 contre une IA : "))%2
+   if mode == 0 :
+       p1 = Player('X', isHuman = True)
+       p2 = Player('O', isHuman = True)
+       PlayTicTacToe(p1,p2)
+   else :
+       p1 = Player('X', isIntelligent = False, learningRate = 0.1)         # You can change the learning rate of each symbol
+       p2 = Player('O', isIntelligent = False, learningRate = 0.1)         # There will be consequences in the Winning Rate
+       print('Start training ... (it can be long)')
+       for i in range(10000) :                                             # You can change the nb of training games : the higher it is, the higher will be the Winning Rate
+           PlayTicTacToe(p1,p2, aiTraining = True)
+       p1.experience.update(p2.experience)
+       aiExperience = copy.deepcopy(p1.experience)
+       #p1.Display_Experience()                        # ---> it's is now p1 and p2 experience
+       WinningRate(aiExperience)
 
-if mode == 0 :
-    p1 = Player('X', isHuman = True)
-    p2 = Player('O', isHuman = True)
-    PlayTicTacToe(p1,p2)
-else :
-    p1 = Player('X', isIntelligent = False, learningRate = 0.1)         # You can change the learning rate of each symbol
-    p2 = Player('O', isIntelligent = False, learningRate = 0.1)         # There will be consequences in the Winning Rate
-    print('Start training ... (it can be long)')
-    for i in range(10000) :                                             # You can change the nb of training games : the higher it is, the higher will be the Winning Rate
-        PlayTicTacToe(p1,p2, aiTraining = True)
-    p1.experience.update(p2.experience)
-    aiExperience = copy.deepcopy(p1.experience)
-    #p1.Display_Experience()                        # ---> it's is now p1 and p2 experience
-    WinningRate(aiExperience)
-
-    p1 = Player('X', isIntelligent = False)
-    p2 = Player('O', isIntelligent = False)
-    while True : 
-        role = [True, False]
-        random.shuffle([True, False])
-        p1 = Player('X', isHuman = role[0], isIntelligent = True, experience = aiExperience)
-        p2 = Player('O', isHuman = role[1], isIntelligent = True, experience = aiExperience)
-        PlayTicTacToe(p1,p2)
-        playAgain = input("Press 1 to play again : ")
-        if playAgain != '1' :
-            break
-    print('Thanks for playing !')
+       p1 = Player('X', isIntelligent = False)
+       p2 = Player('O', isIntelligent = False)
+       while True : 
+           role = [True, False]
+           random.shuffle([True, False])
+           p1 = Player('X', isHuman = role[0], isIntelligent = True, experience = aiExperience)
+           p2 = Player('O', isHuman = role[1], isIntelligent = True, experience = aiExperience)
+           PlayTicTacToe(p1,p2)
+           playAgain = input("Press 1 to play again : ")
+           if playAgain != '1' :
+               break
+       print('Thanks for playing !')
 
 
