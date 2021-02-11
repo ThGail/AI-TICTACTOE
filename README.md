@@ -2,6 +2,7 @@
 Python program generating an AI that can play intelligently to the TicTacToe game.
 
 
+
 Welcome to my TicTacToe AI !
 
 This AI is using reinforcement. The AI plays thousands games in random-moves mode and saves all of them to then associate reward. The reward is proportional to the importance of the move.
