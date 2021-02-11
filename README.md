@@ -9,6 +9,6 @@ A few explanations and comments are in the program, follow the #.
 
 I will upload a NoteBook with the program that find the best learning rate.
 
-Special thanks to @Alexandre_Fresnais who helped me for the understanding of the subject.
+Special thanks to @alexandrefresnais who helped me for the understanding of the subject.
 Feel free to use it. Tell me in what crazy project you would use it or the any update you would propose ! Bye !
 
