@@ -190,7 +190,7 @@ if __name__ == "__main__":
        PlayTicTacToe(p1,p2)
    else :
        p1 = Player('X', isIntelligent = False, learningRate = 0.1)         # You can change the learning rate of each symbol
-       p2 = Player('O', isIntelligent = False, learningRate = 0.1)         # There will be consequences in the Winning Rate
+       p2 = Player('O', isIntelligent = False, learningRate = 0.1)         # There will be consequences on the Winning Rate
        print('Start training ... (it can be long)')
        for i in range(10000) :                                             # You can change the nb of training games : the higher it is, the higher will be the Winning Rate
            PlayTicTacToe(p1,p2, aiTraining = True)
