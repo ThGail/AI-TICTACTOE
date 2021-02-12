@@ -1,5 +1,5 @@
 # AI-TicTacToe
-Python program providing an AI that can play intelligently to the TicTacToe game.
+Python program providing an AI that can play to the TicTacToe game.
 
 
 Welcome to my TicTacToe AI !
