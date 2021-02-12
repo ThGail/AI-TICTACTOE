@@ -11,5 +11,5 @@ Moreover, the file **Learning_Rate.ipynb** contains the code to determine the be
 
 Feel free to use it. Tell me in what crazy project you would use it or the any update you would propose ! Bye !
 
-P.S : Special thanks to @alexandrefresnais who helped in the understanding of the subject.
+P.S : Special thanks to **@alexandrefresnais** who helped in the understanding of the subject.
 
