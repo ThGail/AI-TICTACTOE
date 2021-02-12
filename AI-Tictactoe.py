@@ -116,8 +116,8 @@ class Player :
     def Experience_Saving(self,reward):
         '''
             Here is the most important part of this program : save the experience and associate a reward to each move
-            The last move is always important, the according reward is proportionnal to it's importance.
-            Then, the previous move will receive a less significant reward, because the move is less decisive.
+            The last move is always important, the according reward is proportionnal to its importance.
+            Then, the previous move will receive a less significant reward, because it is less decisive.
         '''
         actionValue = reward
         for state in reversed(self.gameHistory) :
